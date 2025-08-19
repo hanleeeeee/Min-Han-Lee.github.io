@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1><a href="#">Minhan Lee</a></h1>
+            <h1><a href="index.html">Minhan Lee</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="patents.html">Patents</a></li>
+                    <li><a href="awards.html">Awards</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,121 +30,44 @@
     </div>
 
     <main>
-        <div class="main-grid">
-            <div class="grid-col-left">
-                <section id="about">
-                    <h2>About Me</h2>
-                    <div class="details-full">
-                        <div class="about-content">
-                            <img src="profile.jpg" alt="Minhan Lee Profile Picture" class="profile-pic">
-                            <p>I am a Machine Learning/Optical Engineer, currently fulfilling my national defense duty in South Korea. My work and research combine various fields from digital holography and photonics to on-device AI and computer vision.</p>
-                            <p>I graduated from the Department of Electronic Engineering at Kyungpook National University in March 2024. I maintained a GPA of 4.12/4.5 and minored in Computer Engineering. During my undergraduate years, I served as the leader of BITDOL (Hardware Research Group), where I secured funding of 55M KRW(~40,000 USD) and oversaw various projects.</p>
-                            <p>My journey in the field of optics began as an undergraduate researcher in a Vision & Imaging Lab. My research focuses on the intersection of computational imaging, computer vision, and embedded systems, and I'm particularly interested in developing novel algorithms that can operate efficiently on-device for applications in autonomous systems, surveillance, and mobile photography.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="experience">
-                    <h2>Experience</h2>
-                    <div class="experience-item">
-                        <h3>DareeSoft</h3>
-                        <h4>AI Developer | Aug 2025 - Present | Seongnam, Pangyo, South Korea</h4>
-                        <ul>
-                            <li>Training deep learning models by labeling and processing crack data on road surfaces.</li>
-                        </ul>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Kyungpook National University</h3>
-                        <h4>Undergraduate Researcher | Jan 2024 - Dec 2024 | Daegu, South Korea</h4>
-                        <p><strong>Vision & Imaging Lab (Advisor: Prof. Sung-Hak Lee)</strong></p>
-                        <ul>
-                            <li>Participated in research project on low-light image enhancement.</li>
-                            <li>Generated NIR data from visible images using CycleGAN and fused them to enhance image contrast.</li>
-                            <li>Studied HDR imaging techniques through image synthesis and enhancement.</li>
-                        </ul>
-                    </div>
-                </section>
+        <section id="about">
+            <img src="profile.jpg" alt="Minhan Lee Profile Picture" class="profile-pic">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>A Machine Learning and Vision Engineer specializing in the intersection of computational imaging and embedded systems. I develop novel algorithms that operate efficiently on-device for applications in autonomous systems, surveillance, and mobile photography.</p>
             </div>
+        </section>
 
-            <div class="grid-col-right">
-                <section id="interests">
-                    <h2>Interests</h2>
-                    <div class="details-full">
-                        <ul>
-                            <li>Computer Vision - High Dynamic Range (HDR)</li>
-                            <li>Embedded SW - RTOS & Communication Protocols</li>
-                        </ul>
-                    </div>
-                </section>
+        <div class="section-grid">
+            <a href="experience.html" class="section-card">
+                <h3>Experience</h3>
+                <p>AI Developer at DareeSoft and former Undergraduate Researcher at Kyungpook National University's Vision & Imaging Lab.</p>
+                <div class="card-overlay"><span>View Details &rarr;</span></div>
+            </a>
 
-                <section id="publications">
-                    <h2>Publications</h2>
-                    <button class="view-details" data-target="publications-details">View Details</button>
-                    <div id="publications-details" class="details">
-                        <div class="publication-item">
-                            <h3>Journal Paper</h3>
-                            <p>Lee, M.-H.; et al. Low-Light Image Enhancement Using CycleGAN-Based Near-Infrared Image Generation and Fusion. <i>Mathematics</i> 2024.</p>
-                            <a href="https://doi.org/10.3390/math12244028" target="_blank" class="publication-link">View Publication</a>
-                        </div>
-                        <div class="publication-item">
-                            <h3>Conference Poster</h3>
-                            <p>근적외선 영상 생성 학습을 이용한 어두운 환경 감시를 위한 영상 변환</p>
-                            <p><i>2024 Summer Conference of the IEEK</i></p>
-                        </div>
-                        <button class="close-details" data-target="publications-details">Close</button>
-                    </div>
-                </section>
+            <a href="publications.html" class="section-card">
+                <h3>Publications</h3>
+                <p>Co-authored a journal paper on low-light image enhancement and presented research at the IEEK conference.</p>
+                <div class="card-overlay"><span>View Details &rarr;</span></div>
+            </a>
 
-                <section id="awards">
-                    <h2>Awards</h2>
-                    <button class="view-details" data-target="awards-details">View Details</button>
-                    <div id="awards-details" class="details">
-                        <ul>
-                            <li>PBL (Project-Based Learning) Competition, 2025</li>
-                            <li>Hanium ICT Mentoring Program Competition, 2024</li>
-                            <li>Future Mobility Self-Made Vehicle Competition, 2023</li>
-                            <li>Creative Capstone Design Competition, 2023</li>
-                        </ul>
-                        <button class="close-details" data-target="awards-details">Close</button>
-                    </div>
-                </section>
+            <a href="patents.html" class="section-card">
+                <h3>Patents</h3>
+                <p>Filed patent applications in Korea for image processing on hazardous road objects and XR communication systems.</p>
+                <div class="card-overlay"><span>View Details &rarr;</span></div>
+            </a>
 
-                <section id="contact">
-                    <h2>Contact</h2>
-                     <div class="details-full">
-                        <p><strong>Email:</strong> <a href="mailto:mh3603@naver.com">mh3603@naver.com</a></p>
-                        <p><strong>Address:</strong> hwangseol</p>
-                    </div>
-                </section>
-            </div>
+            <a href="awards.html" class="section-card">
+                <h3>Awards</h3>
+                <p>Recipient of awards from various competitions including PBL, Hanium ICT, and Future Mobility.</p>
+                <div class="card-overlay"><span>View Details &rarr;</span></div>
+            </a>
         </div>
     </main>
 
     <footer>
+        <p><strong>Contact:</strong> mh3603@naver.com</p>
         <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const viewButtons = document.querySelectorAll('.view-details');
-            const closeButtons = document.querySelectorAll('.close-details');
-
-            viewButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.dataset.target;
-                    document.getElementById(targetId).style.display = 'block';
-                    this.style.display = 'none';
-                });
-            });
-
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.dataset.target;
-                    document.getElementById(targetId).style.display = 'none';
-                    document.querySelector(`.view-details[data-target='${targetId}']`).style.display = 'block';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
