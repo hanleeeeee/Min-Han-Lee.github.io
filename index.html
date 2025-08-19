@@ -1,108 +1,135 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 포트폴리오</title>
+    <title>Minhan Lee | Vision & Embedded Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>나의 이름 | 직업</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1><a href="#">Minhan Lee | Vision & Embedded Engineer</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="banner">
-        <img src="banner.png" alt="메인 배너">
+        <img src="banner.png" alt="Main Banner">
     </div>
 
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <table>
-                <tr>
-                    <td>
-                        <button class="view-details" data-target="about-details">자세히 보기</button>
-                    </td>
-                </tr>
-            </table>
-            <div id="about-details" class="details">
-                <p>이곳에 자기소개를 작성하세요. 현재 하고 있는 일, 관심 분야 등에 대해 자유롭게 이야기할 수 있습니다.</p>
-                <button class="close-details" data-target="about-details">닫기</button>
+            <div class="details-full">
+                <div class="about-content">
+                    <img src="profile.jpg" alt="Minhan Lee Profile Picture" class="profile-pic">
+                    <p>I am a Machine Learning/Optical Engineer, currently fulfilling my national defense duty in South Korea. My work and research combine various fields from digital holography and photonics to on-device AI and computer vision.</p>
+                    <p>I graduated from the Department of Electronic Engineering at Kyungpook National University in March 2024. I maintained a GPA of 4.12/4.5 and minored in Computer Engineering. During my undergraduate years, I served as the leader of BITDOL (Hardware Research Group), where I secured funding of 55M KRW(~40,000 USD) and oversaw various projects. Through these experiences, I developed extensive expertise in designing and prototyping diverse embedded systems.</p>
+                    <p>My journey in the field of optics began as an undergraduate researcher in a Vision & Imaging Lab, where I was fascinated by the potential of enhancing and synthesizing images. This interest evolved into a passion for combining deep learning with traditional image processing to solve real-world challenges.</p>
+                    <p>Currently, my research focuses on the intersection of computational imaging, computer vision, and embedded systems. I'm particularly interested in developing novel algorithms that can operate efficiently on-device for applications in autonomous systems, surveillance, and mobile photography.</p>
+                    <p>My hobbies include drawing, media art, collecting vinyl LPs, and visiting exhibitions. Feel free to reach out if you'd like to chat over coffee!</p>
+                </div>
             </div>
         </section>
 
-        <section id="research">
-            <h2>Research</h2>
-            <table>
-                <tr>
-                    <td>
-                        <button class="view-details" data-target="research-details">자세히 보기</button>
-                    </td>
-                </tr>
-            </table>
-            <div id="research-details" class="details">
-                <p>자신의 연구 분야나 관심 있는 학문 분야에 대해 작성해 보세요.</p>
-                <button class="close-details" data-target="research-details">닫기</button>
+        <section id="interests">
+            <h2>Interests</h2>
+            <button class="view-details" data-target="interests-details">View Details</button>
+            <div id="interests-details" class="details">
+                <ul>
+                    <li>Computer Vision - High Dynamic Range (HDR)</li>
+                    <li>Embedded SW - RTOS & Communication Protocols</li>
+                </ul>
+                <button class="close-details" data-target="interests-details">Close</button>
             </div>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
-            <table>
-                <tr>
-                    <td>
-                        <button class="view-details" data-target="publications-details">자세히 보기</button>
-                    </td>
-                </tr>
-            </table>
+            <button class="view-details" data-target="publications-details">View Details</button>
             <div id="publications-details" class="details">
-                <p>논문이나 출판물이 있다면 이곳에 목록을 추가하세요.</p>
-                <button class="close-details" data-target="publications-details">닫기</button>
+                <div class="publication-item">
+                    <h3>Journal Paper</h3>
+                    <p>Lee, M.-H.; Go, Y.-H.; Lee, S.-H.; Lee, S.-H. Low-Light Image Enhancement Using CycleGAN-Based Near-Infrared Image Generation and Fusion. <i>Mathematics</i> 2024, <i>12</i>, 4028.</p>
+                    <h4>Abstract</h4>
+                    <blockquote>
+                        (This is a placeholder) The abstract for the paper goes here. It describes the core contributions, methods, and results of the research in a concise summary.
+                    </blockquote>
+                    <a href="https://doi.org/10.3390/math12244028" target="_blank" class="publication-link">View Publication</a>
+                </div>
+                <div class="publication-item">
+                    <h3>Conference Poster Presentation</h3>
+                    <p>근적외선 영상 생성 학습을 이용한 어두운 환경 감시를 위한 영상 변환 (Image Transformation for Dark Environment Surveillance Using Near-Infrared Image Generation Learning)</p>
+                    <p><i>Presented at: 2024 Summer Conference of the Institute of Electronics Engineers of Korea</i></p>
+                </div>
+                <button class="close-details" data-target="publications-details">Close</button>
             </div>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <table>
-                <tr>
-                    <td>
-                        <button class="view-details" data-target="experience-details">자세히 보기</button>
-                    </td>
-                </tr>
-            </table>
+            <button class="view-details" data-target="experience-details">View Details</button>
             <div id="experience-details" class="details">
-                <p>자신의 경력이나 경험을 이곳에 작성해 보세요.</p>
-                <button class="close-details" data-target="experience-details">닫기</button>
+                <div class="experience-item">
+                    <h3>DareeSoft</h3>
+                    <h4>AI Developer | Aug 2025 - Present | Seongnam, Pangyo, South Korea</h4>
+                    <ul>
+                        <li>Training deep learning models by labeling and processing crack data on road surfaces.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Kyungpook National University</h3>
+                    <h4>Undergraduate Researcher | Jan 2024 - Dec 2024 | Daegu, South Korea</h4>
+                    <p><strong>Vision & Imaging Lab (Advisor: Prof. Sung-Hak Lee)</strong></p>
+                    <ul>
+                        <li>Participated in research project on low-light image enhancement.</li>
+                        <li>Generated NIR (Near-Infrared) data from visible images using CycleGAN and fused them to enhance image contrast.</li>
+                        <li>Studied HDR (High Dynamic Range) imaging techniques through image synthesis and enhancement.</li>
+                        <li>Analyzed and processed images using MATLAB and Python for deep learning-based enhancement.</li>
+                        <li>Gained experience in designing and implementing image enhancement pipelines.</li>
+                    </ul>
+                </div>
+                <button class="close-details" data-target="experience-details">Close</button>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Awards</h2>
+            <button class="view-details" data-target="awards-details">View Details</button>
+            <div id="awards-details" class="details">
+                <ul>
+                    <li>PBL (Project-Based Learning) Competition, 2025</li>
+                    <li>Hanium ICT Mentoring Program Competition, 2024</li>
+                    <li>2023 Future Mobility Self-Made Vehicle Competition, 2023</li>
+                    <li>Creative Capstone Design Competition, 2023</li>
+                </ul>
+                <button class="close-details" data-target="awards-details">Close</button>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <table>
-                <tr>
-                    <td>
-                        <button class="view-details" data-target="contact-details">자세히 보기</button>
-                    </td>
-                </tr>
-            </table>
+            <button class="view-details" data-target="contact-details">View Details</button>
             <div id="contact-details" class="details">
-                <p>이메일 주소 등 연락처를 남겨주세요.</p>
-                <button class="close-details" data-target="contact-details">닫기</button>
+                <p><strong>Email:</strong> mh3603@naver.com</p>
+                <p><strong>Address:</strong> hwangseol</p>
+                <button class="close-details" data-target="contact-details">Close</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 나의 이름. All Rights Reserved.</p>
+        <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -114,6 +141,7 @@
                 button.addEventListener('click', function() {
                     const targetId = this.dataset.target;
                     document.getElementById(targetId).style.display = 'block';
+                    this.style.display = 'none'; // Hide the 'View Details' button
                 });
             });
 
@@ -121,6 +149,8 @@
                 button.addEventListener('click', function() {
                     const targetId = this.dataset.target;
                     document.getElementById(targetId).style.display = 'none';
+                    // Show the 'View Details' button again
+                    document.querySelector(`.view-details[data-target='${targetId}']`).style.display = 'block';
                 });
             });
         });
