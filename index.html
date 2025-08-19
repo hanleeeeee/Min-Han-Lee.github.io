@@ -20,35 +20,110 @@
         </nav>
     </header>
 
+    <div class="banner">
+        <img src="banner.png" alt="메인 배너">
+    </div>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>이곳에 자기소개를 작성하세요. 현재 하고 있는 일, 관심 분야 등에 대해 자유롭게 이야기할 수 있습니다.</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="view-details" data-target="about-details">자세히 보기</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="about-details" class="details">
+                <p>이곳에 자기소개를 작성하세요. 현재 하고 있는 일, 관심 분야 등에 대해 자유롭게 이야기할 수 있습니다.</p>
+                <button class="close-details" data-target="about-details">닫기</button>
+            </div>
         </section>
 
         <section id="research">
             <h2>Research</h2>
-            <p>자신의 연구 분야나 관심 있는 학문 분야에 대해 작성해 보세요.</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="view-details" data-target="research-details">자세히 보기</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="research-details" class="details">
+                <p>자신의 연구 분야나 관심 있는 학문 분야에 대해 작성해 보세요.</p>
+                <button class="close-details" data-target="research-details">닫기</button>
+            </div>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
-            <p>논문이나 출판물이 있다면 이곳에 목록을 추가하세요.</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="view-details" data-target="publications-details">자세히 보기</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="publications-details" class="details">
+                <p>논문이나 출판물이 있다면 이곳에 목록을 추가하세요.</p>
+                <button class="close-details" data-target="publications-details">닫기</button>
+            </div>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <p>자신의 경력이나 경험을 이곳에 작성해 보세요.</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="view-details" data-target="experience-details">자세히 보기</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="experience-details" class="details">
+                <p>자신의 경력이나 경험을 이곳에 작성해 보세요.</p>
+                <button class="close-details" data-target="experience-details">닫기</button>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>이메일 주소 등 연락처를 남겨주세요.</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="view-details" data-target="contact-details">자세히 보기</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="contact-details" class="details">
+                <p>이메일 주소 등 연락처를 남겨주세요.</p>
+                <button class="close-details" data-target="contact-details">닫기</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 나의 이름. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewButtons = document.querySelectorAll('.view-details');
+            const closeButtons = document.querySelectorAll('.close-details');
+
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    document.getElementById(targetId).style.display = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
