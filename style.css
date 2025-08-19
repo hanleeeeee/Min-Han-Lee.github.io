@@ -1,61 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Minhan Lee</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1><a href="index.html">Minhan Lee</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="patents.html">Patents</a></li>
-                    <li><a href="awards.html">Awards</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+:root {
+    --navy-dark: #1d2c4b;
+    --navy-light: #3a6ea5;
+    --text-light: #f0f4f8;
+    --text-dark: #1d2c4b;
+    --accent-color: #ffffff;
+}
 
-    <main class="detail-page">
-        <section>
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-            <h2>Experience</h2>
-            
-            <div class="detail-item">
-                <h3>DareeSoft</h3>
-                <h4>AI Developer | Aug 2025 - Present | Seongnam, Pangyo, South Korea</h4>
-                <ul>
-                    <li>Training deep learning models by labeling and processing crack data on road surfaces.</li>
-                </ul>
-            </div>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-dark) 100%);
+    background-attachment: fixed;
+    color: var(--text-light);
+}
 
-            <div class="detail-item">
-                <h3>Kyungpook National University</h3>
-                <h4>Undergraduate Researcher | Jan 2024 - Dec 2024 | Daegu, South Korea</h4>
-                <p><strong>Vision & Imaging Lab (Advisor: Prof. Sung-Hak Lee)</strong></p>
-                <ul>
-                    <li>Participated in research project on low-light image enhancement.</li>
-                    <li>Generated NIR (Near-Infrared) data from visible images using CycleGAN and fused them to enhance image contrast.</li>
-                    <li>Studied HDR (High Dynamic Range) imaging techniques through image synthesis and enhancement.</li>
-                    <li>Analyzed and processed images using MATLAB and Python for deep learning-based enhancement.</li>
-                    <li>Gained experience in designing and implementing image enhancement pipelines.</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+header {
+    background: rgba(29, 44, 75, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    <footer>
-        <p><strong>Contact:</strong> mh3603@naver.com</p>
-        <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+header h1 a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+}
+.profile-pic {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+}
+#about h2 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.section-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    color: var(--text-light);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.section-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.section-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+.section-card p {
+    color: #b0c4de; /* Lighter text for summary */
+}
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 44, 75, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.section-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Detail Page Styles */
+.detail-page section {
+    background: #ffffff;
+    color: var(--text-dark);
+    padding: 40px;
+    border-radius: 12px;
+}
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--navy-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+.detail-page h2 {
+    margin-top: 0;
+    color: var(--navy-dark);
+    border-bottom: 3px solid var(--navy-light);
+    padding-bottom: 10px;
+}
+.detail-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.detail-item:last-child { border-bottom: none; }
+.detail-item h3 { color: var(--navy-dark); }
+.detail-item h4 { color: #555; font-weight: 400; }
+.detail-item ul { padding-left: 20px; }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+}
