@@ -140,7 +140,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 .col-image img { 
     width: 150px;
     border-radius: 8px; 
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .col-text { flex-grow: 1; }
 
@@ -160,8 +160,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 }
 .interest-image {
     flex-shrink: 0;
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     border-radius: 8px;
     object-fit: cover;
     margin-top: 10px;
@@ -174,4 +174,5 @@ footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--
     .two-col-layout { flex-direction: column; align-items: flex-start; }
     .profile-pic-detail { float: none; display: block; margin: 0 auto 20px; }
 }
+
 
