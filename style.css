@@ -60,6 +60,40 @@ nav a:hover { color: var(--accent-color); }
 
 main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 
+#about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    background: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+.profile-pic {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+}
+#about h2 {
+    margin-top: 0;
+    color: var(--text-dark);
+}
+.about-text p {
+    color: var(--text-secondary);
+}
+a.detail-link {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+a.detail-link:hover {
+    text-decoration: underline;
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -110,7 +144,11 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 .detail-item ul { padding-left: 20px; }
 
 /* 2-Column Layout for Details */
-.two-col-layout { display: flex; gap: 30px; align-items: flex-start; }
+.two-col-layout { 
+    display: flex; 
+    gap: 30px; 
+    align-items: baseline; /* 수정된 부분: 이미지와 텍스트 높이를 시작점에 맞춤 */
+}
 .col-image { flex-shrink: 0; }
 .col-image img { width: 120px; border-radius: 8px; }
 .col-text { flex-grow: 1; }
@@ -118,7 +156,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 .profile-pic-detail { 
     float: right; 
     width: 180px; 
-    border-radius: 12px; /* 원형에서 사각형으로 변경 */
+    border-radius: 12px;
     margin: 10px 0 20px 30px; 
     border: 4px solid var(--light-blue-end); 
 }
@@ -133,6 +171,6 @@ footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--
 
 @media (max-width: 768px) {
     .section-grid { grid-template-columns: 1fr; }
-    .two-col-layout { flex-direction: column; }
+    .two-col-layout { flex-direction: column; align-items: flex-start; } /* 모바일에서는 다시 상단 정렬 */
     .profile-pic-detail { float: none; display: block; margin: 0 auto 20px; }
 }
