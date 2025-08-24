@@ -98,8 +98,25 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 }
 .section-card p { color: var(--text-secondary); }
 
+/* 'View Details' 오버레이 스타일 (다시 활성화) */
 .card-overlay {
-    display: none;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.85), rgba(0, 198, 255, 0.85));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 평소에는 투명하게 */
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+/* 카드 호버 시 오버레이를 불투명하게 만듦 */
+.section-card:hover .card-overlay {
+    opacity: 1;
 }
 
 /* Detail Page Styles */
@@ -121,17 +138,17 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 }
 .col-image { flex-shrink: 0; }
 .col-image img { 
-    width: 150px; /* Experience, Publications 이미지 크기 증가 */
-    margin-top: 10px;
+    width: 150px;
     border-radius: 8px; 
+    margin-top: 5px;
 }
 .col-text { flex-grow: 1; }
 
 .profile-pic-detail { 
     float: right; 
-    width: 250px; /* About Me 프로필 사진 크기 증가 */
+    width: 250px;
     border-radius: 12px;
-    margin: 10px 0 20px 40px;
+    margin: 5px 0 20px 40px;
     border: 4px solid var(--light-blue-end); 
 }
 
@@ -141,14 +158,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
     gap: 20px;
     align-items: flex-start;
 }
-
 .interest-image {
     flex-shrink: 0;
-    width: 130px; /* Interests 이미지 크기 증가 */
-    height: 130px; /* Interests 이미지 크기 증가 */
+    width: 130px;
+    height: 130px;
     border-radius: 8px;
     object-fit: cover;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--white-color); color: var(--text-secondary); border-top: 1px solid #e9ecef; }
@@ -158,4 +174,3 @@ footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--
     .two-col-layout { flex-direction: column; align-items: flex-start; }
     .profile-pic-detail { float: none; display: block; margin: 0 auto 20px; }
 }
-
