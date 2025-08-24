@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="detail-page">
     <header>
         <div class="header-container">
             <h1><a href="index.html">Minhan Lee</a></h1>
             <nav>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
+                 <ul>
+                    <li><a href="about me.html">About</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="patents.html">Patents</a></li>
@@ -25,34 +25,45 @@
         </div>
     </header>
 
-    <main class="detail-page">
+    <main>
         <section>
             <a href="index.html" class="back-link">&larr; Back to Home</a>
             <h2>Experience</h2>
             <div class="detail-item">
-                <h3>DareeSoft</h3>
-                <h4>AI developer | 2025.08~ | Seongnam, Pangyo, South Korea</h4>
-                <ul>
-                    <li>Training models by labeling cracks on road surfaces.</li>
-                </ul>
+                <div class="two-col-layout">
+                    <div class="col-image">
+                        <img src="daree.png" alt="DareeSoft Logo">
+                    </div>
+                    <div class="col-text">
+                        <h3>DareeSoft</h3>
+                        <h4>AI developer | 2025.08~ | Seongnam, Pangyo, South Korea</h4>
+                        <ul>
+                            <li>Training models by labeling cracks on road surfaces.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="detail-item">
-                <h3>Kyungpook National University</h3>
-                <h4>Undergraduate Researcher | January 2024 - December 2024 | Daegu, South Korea</h4>
-                <p><strong>Vision & Imaging Lab • Advisor: Prof. Sung-Hak Lee</strong></p>
-                <ul>
-                    <li>Participated in research project on low-light image enhancement</li>
-                    <li>Generated NIR (Near-Infrared) data from visible images using CycleGAN and fused them to enhance image contrast</li>
-                    <li>Studied HDR (High Dynamic Range) imaging techniques through image synthesis and enhancement</li>
-                    <li>Analyzed and processed images using MATLAB and Python for deep learning-based enhancement</li>
-                    <li>Gained experience in designing and implementing image enhancement pipelines</li>
-                </ul>
+                <div class="two-col-layout">
+                    <div class="col-image">
+                        <img src="kyung.png" alt="Kyungpook National University Logo">
+                    </div>
+                    <div class="col-text">
+                        <h3>Kyungpook National University</h3>
+                        <h4>Undergraduate Researcher | January 2024 - December 2024 | Daegu, South Korea</h4>
+                        <p><strong>Vision & Imaging Lab • Advisor: Prof. Sung-Hak Lee</strong></p>
+                        <ul>
+                            <li>Participated in research project on low-light image enhancement</li>
+                            <li>Generated NIR (Near-Infrared) data from visible images using CycleGAN and fused them to enhance image contrast</li>
+                            <li>Studied HDR (High Dynamic Range) imaging techniques through image synthesis and enhancement</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
-        <p><strong>Contact:</strong> mh3603@naver.com</p>
         <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
     </footer>
 </body>
