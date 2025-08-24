@@ -53,46 +53,12 @@ nav a:hover { color: var(--accent-color); }
     width: 100%;
     height: 300px;
     overflow: hidden;
-    opacity: 0; /* Initially hidden for animation */
-    animation: fadeIn 1s ease-in-out 0.2s forwards; /* Delayed fade-in */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.2s forwards;
 }
 .banner img { width: 100%; height: 100%; object-fit: cover; }
 
 main { max-width: 1200px; margin: 0 auto; padding: 40px; }
-
-#about {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 50px;
-    background: var(--white-color);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-}
-.profile-pic {
-    max-width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid var(--accent-color);
-}
-#about h2 {
-    margin-top: 0;
-    color: var(--text-dark);
-}
-.about-text p {
-    color: var(--text-secondary);
-}
-a.detail-link {
-    color: var(--accent-color);
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-a.detail-link:hover {
-    text-decoration: underline;
-}
 
 .section-grid {
     display: grid;
@@ -132,7 +98,6 @@ a.detail-link:hover {
 }
 .section-card:hover .card-overlay { opacity: 1; }
 
-/* Detail Page Styles */
 .detail-page main { animation: fadeIn 0.5s ease-in-out forwards; }
 .detail-page section { background: var(--white-color); color: var(--text-dark); padding: 40px; border-radius: 12px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05); }
 .back-link { display: inline-block; margin-bottom: 30px; color: var(--accent-color); text-decoration: none; font-weight: 600; }
@@ -144,21 +109,21 @@ a.detail-link:hover {
 .detail-item ul { padding-left: 20px; }
 
 /* 2-Column Layout for Details */
-.two-col-layout { 
-    display: flex; 
-    gap: 30px; 
-    align-items: baseline; /* 수정된 부분: 이미지와 텍스트 높이를 시작점에 맞춤 */
+.two-col-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* 제목과 이미지 상단 정렬 */
 }
 .col-image { flex-shrink: 0; }
 .col-image img { width: 120px; border-radius: 8px; }
 .col-text { flex-grow: 1; }
 
-.profile-pic-detail { 
-    float: right; 
-    width: 180px; 
+.profile-pic-detail {
+    float: right;
+    width: 180px;
     border-radius: 12px;
-    margin: 10px 0 20px 30px; 
-    border: 4px solid var(--light-blue-end); 
+    margin: 10px 0 20px 30px;
+    border: 4px solid var(--light-blue-end);
 }
 
 .keywords { padding: 0; list-style: none; margin-top: 20px; }
@@ -171,6 +136,45 @@ footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--
 
 @media (max-width: 768px) {
     .section-grid { grid-template-columns: 1fr; }
-    .two-col-layout { flex-direction: column; align-items: flex-start; } /* 모바일에서는 다시 상단 정렬 */
+    .two-col-layout { flex-direction: column; align-items: flex-start; }
     .profile-pic-detail { float: none; display: block; margin: 0 auto 20px; }
+}
+
+/* Interests Page Styles */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.interest-item {
+    background: var(--white-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.interest-item h3 {
+    margin-top: 0;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.interest-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.interest-image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.interest-text p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
 }
