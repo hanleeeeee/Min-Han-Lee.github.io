@@ -9,39 +9,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="detail-page">
     <header>
         <div class="header-container">
             <h1><a href="index.html">Minhan Lee</a></h1>
             <nav>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="experience.html">Experience</a></li>
+                 <ul>
+                    <li><a href="about me.html">About</a></li>
+                    <li><a href="interests.html">Interests</a></li>
                     <li><a href="publications.html">Publications</a></li>
-                    <li><a href="patents.html">Patents</a></li>
+                    <li><a href="experience.html">Experience</a></li>
                     <li><a href="awards.html">Awards</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="detail-page">
+    <main>
         <section>
             <a href="index.html" class="back-link">&larr; Back to Home</a>
             <h2>Interests</h2>
-            <div class="detail-item">
-                <h3>Computer vision-HDR</h3>
-                <p>Exploring techniques for High Dynamic Range imaging through image synthesis and enhancement to capture a wider range of light intensities, leading to more realistic and detailed images in challenging lighting conditions.</p>
-            </div>
-            <div class="detail-item">
-                <h3>Embedded SW-RTOS 및 통신 관련</h3>
-                <p>Focusing on Real-Time Operating Systems (RTOS) for predictable and timely execution in embedded systems. Also interested in various communication protocols to ensure reliable data transfer between devices.</p>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <h3>Computer Vision - HDR</h3>
+                    <div class="interest-content">
+                        <div class="interest-image">
+                            <img src="hdr.jpg" alt="HDR Image">
+                        </div>
+                        <div class="interest-text">
+                            <p>Exploring techniques for High Dynamic Range imaging through image synthesis and enhancement to capture a wider range of light intensities, leading to more realistic and detailed images in challenging lighting conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <h3>Embedded SW - RTOS & Communication</h3>
+                    <div class="interest-content">
+                        <div class="interest-image">
+                            <img src="jetson.jpeg" alt="NVIDIA Jetson">
+                        </div>
+                        <div class="interest-text">
+                            <p>Focusing on Real-Time Operating Systems (RTOS) for predictable and timely execution in embedded systems. Also interested in various communication protocols to ensure reliable data transfer between devices like NVIDIA Jetson and Raspberry Pi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <h3>Computational Optics & Holography</h3>
+                    <div class="interest-content">
+                        <div class="interest-image">
+                            <img src="holography.jpg" alt="Holography Concept">
+                        </div>
+                        <div class="interest-text">
+                            <p>Passionate about the principles of wave optics and interference patterns, particularly in the context of digital holography and its potential to create true three-dimensional visual representations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <h3>On-Device AI & Model Optimization</h3>
+                    <div class="interest-content">
+                        <div class="interest-image">
+                            <img src="on_device_ai.jpg" alt="On-Device AI">
+                        </div>
+                        <div class="interest-text">
+                            <p>Investigating methods to deploy and optimize machine learning models for resource-constrained embedded devices, enabling real-time AI processing at the edge.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p><strong>Contact:</strong> mh3603@naver.com</p>
         <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
     </footer>
 </body>
