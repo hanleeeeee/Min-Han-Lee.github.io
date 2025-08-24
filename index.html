@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fade-in">
     <header>
         <div class="header-container">
             <h1><a href="index.html">Minhan Lee</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="about me.html">About</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="patents.html">Patents</a></li>
@@ -30,16 +30,13 @@
     </div>
 
     <main>
-        <section id="about">
-            <img src="profile.jpg" alt="Minhan Lee Profile Picture" class="profile-pic">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>A Machine Learning and Vision Engineer specializing in the intersection of computational imaging and embedded systems. I develop novel algorithms that operate efficiently on-device for applications in autonomous systems, surveillance, and mobile photography.</p>
-                <a href="about me.html" class="detail-link">Learn more about my journey &rarr;</a>
-            </div>
-        </section>
-
         <div class="section-grid">
+             <a href="about me.html" class="section-card">
+                <h3>About Me</h3>
+                <p>A Machine Learning and Vision Engineer specializing in the intersection of computational imaging and embedded systems.</p>
+                <div class="card-overlay"><span>View Details &rarr;</span></div>
+            </a>
+            
             <a href="experience.html" class="section-card">
                 <h3>Experience</h3>
                 <p>AI Developer at DareeSoft and former Undergraduate Researcher at Kyungpook National University's Vision & Imaging Lab.</p>
@@ -48,7 +45,7 @@
 
             <a href="publications.html" class="section-card">
                 <h3>Publications</h3>
-                <p>Co-authored a journal paper on low-light image enhancement and presented research at the IEEK conference.</p>
+                <p>Co-authored a journal paper on hologram upscaling and presented research at optical science conferences.</p>
                 <div class="card-overlay"><span>View Details &rarr;</span></div>
             </a>
 
@@ -60,13 +57,7 @@
 
             <a href="awards.html" class="section-card">
                 <h3>Awards</h3>
-                <p>Recipient of awards from various competitions including PBL, Hanium ICT, and Future Mobility.</p>
-                <div class="card-overlay"><span>View Details &rarr;</span></div>
-            </a>
-            
-            <a href="interests.html" class="section-card">
-                <h3>Interests</h3>
-                <p>Exploring topics in High Dynamic Range (HDR) Computer Vision, Real-Time Operating Systems (RTOS), and communication protocols.</p>
+                <p>Recipient of awards from various competitions including KNU EE Research Congress, PBL, and Hanium ICT.</p>
                 <div class="card-overlay"><span>View Details &rarr;</span></div>
             </a>
             
@@ -79,7 +70,6 @@
     </main>
 
     <footer>
-        <p><strong>Contact:</strong> mh3603@naver.com</p>
         <p>&copy; 2025 Minhan Lee. All Rights Reserved.</p>
     </footer>
 </body>
