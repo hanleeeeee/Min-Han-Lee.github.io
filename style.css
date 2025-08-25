@@ -98,7 +98,6 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 }
 .section-card p { color: var(--text-secondary); }
 
-/* 'View Details' 오버레이 스타일 (다시 활성화) */
 .card-overlay {
     position: absolute;
     top: 0; left: 0;
@@ -107,14 +106,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* 평소에는 투명하게 */
+    opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--white-color);
 }
 
-/* 카드 호버 시 오버레이를 불투명하게 만듦 */
 .section-card:hover .card-overlay {
     opacity: 1;
 }
@@ -140,9 +138,20 @@ main { max-width: 1200px; margin: 0 auto; padding: 40px; }
 .col-image img { 
     width: 150px;
     border-radius: 8px; 
+}
+
+/* Experience 페이지의 kyung.png 이미지만 아래로 내리기 */
+.kyung-logo {
     margin-top: 10px;
 }
+
 .col-text { flex-grow: 1; }
+
+/* Publications 페이지 이미지 크기 키우기 */
+.publication-image img {
+    width: 300px;
+    border-radius: 8px;
+}
 
 .profile-pic-detail { 
     float: right; 
@@ -174,5 +183,3 @@ footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--
     .two-col-layout { flex-direction: column; align-items: flex-start; }
     .profile-pic-detail { float: none; display: block; margin: 0 auto 20px; }
 }
-
-
